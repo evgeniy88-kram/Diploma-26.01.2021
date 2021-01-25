@@ -49,6 +49,11 @@ body {
   &__navbar {
     @include flexCentCent;
     padding-top: 30px;
+    &--logo {
+      img {
+        width: 145px;
+      }
+    }
     &__menu {
       @media screen and (max-width: 1000px) {
         display: flex;
@@ -1386,24 +1391,25 @@ body {
   position: fixed;
   z-index: 101;
   width: 700px;
-  min-height: 500px;
+  max-height: 800px;
   margin: 5% auto;
   background: $hColor;
   border-radius: 30px;
   left: 0;
   right: 0;
   color: #000000;
+  overflow: auto;
   @media screen and (max-width: 1000px) {
     width: 600px;
-    min-height: 400px;
+    max-height: 600px;
   }
   @media screen and (max-width: 700px) {
     width: 500px;
-    min-height: 440px;
+    max-height: 500px;
   }
   @media screen and (max-width: 550px) {
     width: 300px;
-    min-height: 350px;
+    max-height: 350px;
   }
   &__close {
     border-radius: 50%;
