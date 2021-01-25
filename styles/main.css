@@ -168,7 +168,7 @@ body {
 }
 @media screen and (max-width: 500px) {
   .header__navbar__btn {
-    margin: 0 15px 0 5vw;
+    margin: 0 5px 0 5vw;
   }
 }
 .header__navbar__btn:hover {
