@@ -1297,7 +1297,7 @@ body {
   width: 450px;
   height: 550px;
   margin: 5% auto;
-  background: $btnColor;
+  background: $modalbgColor;
   border-radius: 200px 0;
   left: 0;
   right: 0;
@@ -1326,7 +1326,7 @@ body {
     span {
       a {
         text-decoration: none;
-        color: $priceColor;
+        color: $btnColor;
       }
     }
   }
