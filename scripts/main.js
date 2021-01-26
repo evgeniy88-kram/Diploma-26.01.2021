@@ -1,7 +1,7 @@
 ;(function($){
     $(function (){
 //Timer
-        let countDownDate = new Date("Jan 26, 2021 15:02:00").getTime();
+        let countDownDate = new Date("Jan 27, 2021 19:00:00").getTime();
         let x = setInterval(function() {
             let now = new Date().getTime(),
                 dist = countDownDate - now,
@@ -56,13 +56,16 @@
         //
         //Slick-sliders
         $('.accessories__slick').slick({
-            arrows:false,
+            autoplay:true,
+            autoplaySpeed: 5000,
+            arrows: true,
             dots: true,
             slidesToShow: 3,
             slidesToScroll: 1,
             responsive: [{
-                breakpoint: 1100,
+                breakpoint: 1150,
                 settings: {
+                    arrows: false,
                     slidesToShow: 2,
                     slidesToScroll: 1
                 }
@@ -70,14 +73,15 @@
             {
                 breakpoint: 700,
                 settings: {
+                    arrows: false,
                     slidesToShow: 1,
                     slidesToScroll: 1
                     }
                 }]
         });
         $('.review__slick').slick({
-            // autoplay:true,
-            // autoplaySpeed: 5000,
+            autoplay:true,
+            autoplaySpeed: 5000,
             arrows:true,
             dots: true,
             slidesToShow: 1,
@@ -212,11 +216,11 @@
 // Карта Google
 function initMap() {
     const map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 14.25,
-        center: { lat: 48.7283816, lng: 37.6039137 },
+        zoom: 11.25,
+        center: { lat: 48.73161, lng: 37.61589 },
     });
     const mark = new google.maps.Marker({
-        position: { lat: 48.7343469, lng: 37.6047192 },
+        position: { lat: 48.7343469, lng: 37.597213 },
         map,
         title: "STIHL",
         animation: google.maps.Animation.BOUNCE

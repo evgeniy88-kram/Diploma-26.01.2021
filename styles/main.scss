@@ -11,18 +11,21 @@ $priceColor: #FF2747;
 $elemColor: #CFCFCF;
 $hoverColor: gold;
 $modalbgColor: #cdcdcd;
+
+$mainFont: 'Open Sans', sans-serif;
+
 @mixin font600-16() {
-  font-family: 'Open Sans', sans-serif;
+  font-family: $mainFont;
   font-weight: 600;
   font-size: 16px;
 }
 @mixin font300-16() {
-  font-family: 'Open Sans', sans-serif;
+  font-family: $mainFont;
   font-weight: 300;
   font-size: 16px;
 }
 @mixin font600-45() {
-  font-family: 'Open Sans', sans-serif;
+  font-family: $mainFont;
   font-weight: 600;
   font-size: 45px;
 }
@@ -31,6 +34,7 @@ $modalbgColor: #cdcdcd;
   align-items: center;
   justify-content: center;
 }
+
 * {
   letter-spacing: 0.05em;
 }
@@ -134,7 +138,7 @@ body {
         display: flex;
         justify-content: space-around;
         margin: 0 50px 0 115px;
-        transition: all 500ms linear;
+        transition: all 300ms linear;
         @media screen and (max-width: 1250px) {
           margin: 0 2vw 0 5vw;
         }
@@ -145,10 +149,8 @@ body {
           text-decoration: none;
           color: $hColor;
           margin: 0 12px;
-          font-family: 'Open Sans', sans-serif;
-          font-weight: 600;
-          font-size: 17px;
-          transition: all 500ms linear;
+          @include font600-16;
+          transition: all 300ms linear;
           @media screen and (max-width: 1250px) {
             font-size: 14px;
           }
@@ -166,7 +168,7 @@ body {
       @include flexCentCent;
       @include font600-16;
       cursor: pointer;
-      transition: all 500ms linear;
+      transition: all 200ms linear;
       @media screen and (max-width: 1000px) {
         margin: 0 30px 0 50vw;
       }
@@ -198,16 +200,14 @@ body {
         height: 25px;
         width: 25px;
         border-radius: 50%;
-        font-family: 'Open Sans', sans-serif;
-        font-weight: 600;
-        font-size: 15px;
+        @include font600-16;
         text-align: center;
         background: $btnColor;
       }
     }
   }
   article {
-    font-family: 'Open Sans', sans-serif;
+    font-family: $mainFont;
     font-weight: 700;
     font-size: 55px;
     margin: 150px auto 37px;
@@ -233,11 +233,11 @@ body {
     height: 55px;
     margin: 0 auto 97px;
     @include flexCentCent;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 700;
-    font-size: 16px;
+    font-family: $mainFont;
+    font-weight: 600;
+    font-size: 20px;
     background-color: $btnColor;
-    transition: all 500ms linear;
+    transition: all 200ms linear;
     cursor: pointer;
     @media screen and (max-width: 500px) {
       margin: 0 auto 20px;
@@ -289,14 +289,14 @@ body {
       &:hover {
         color: $hoverColor;
         animation: pulse;
-        animation-duration: 2s;
+        animation-duration: 1s;
         svg {
           fill: $hoverColor;
         }
       }
       p {
         margin: 30px auto 0;
-        font-family: 'Open Sans', sans-serif;
+        font-family: $mainFont;
         font-weight: 300;
         font-size: 23px;
         text-align: center;
@@ -385,7 +385,7 @@ body {
     }
     p {
       margin: 20px 0 42px;
-      font-family: 'Open Sans', sans-serif;
+      font-family: $mainFont;
       font-weight: 300;
       font-size: 18px;
       line-height: 27px;
@@ -412,7 +412,7 @@ body {
       background-color: $btnColor;
       color: $hColor;
       cursor: pointer;
-      transition: all 500ms linear;
+      transition: all 200ms linear;
       @media screen and (max-width: 600px) {
         font-size: 14px;
         width: 120px;
@@ -470,7 +470,6 @@ body {
       display: none;
     }
     img {
-      cursor: pointer;
       @media screen and (max-width: 1100px) {
         width: 300px;
         height: 180px;
@@ -571,7 +570,7 @@ body {
       align-items: center;
     }
     h2 {
-      font-family: 'Open Sans', sans-serif;
+      font-family: $mainFont;
       font-weight: 800;
       font-size: 25px;
       margin: 0 0 25px;
@@ -604,7 +603,7 @@ body {
        align-items: center;
        span {
          color: $priceColor;
-         font-family: 'Open Sans', sans-serif;
+         font-family: $mainFont;
          font-weight: 800;
          font-size: 35px;
          margin: 0 30px 0 0;
@@ -624,7 +623,7 @@ body {
          color: $hColor;
          @include font600-16;
          cursor: pointer;
-         transition: all 500ms linear;
+         transition: all 200ms linear;
          @media screen and (max-width: 1100px) {
            font-size: 14px;
            width: 80px;
@@ -646,7 +645,7 @@ body {
     margin: 70px auto 60px;
     @include flexCentCent;
     cursor: pointer;
-    transition: all 500ms linear;
+    transition: all 200ms linear;
     background-color: $btnColor;
     @media screen and (max-width: 1100px) {
       margin: 50px auto 0;
@@ -696,7 +695,6 @@ body {
     }
   }
   img {
-    cursor: pointer;
     @media screen and (max-width: 800px) {
       height: 400px;
     }
@@ -744,7 +742,6 @@ body {
         font-weight: 600;
         font-size: 30px;
         color: $hColor;
-        cursor: pointer;
         @media screen and (max-width: 800px) {
           top: 315px;
           left: -13px;
@@ -784,7 +781,7 @@ body {
         margin-top: 30px;
       }
       h2 {
-        font-family: 'Open Sans', sans-serif;
+        font-family: $mainFont;
         font-weight: 800;
         font-size: 25px;
         margin: 0;
@@ -833,7 +830,7 @@ body {
         display: flex;
         align-items: center;
         span {
-          font-family: 'Open Sans', sans-serif;
+          font-family: $mainFont;
           font-weight: 800;
           font-size: 35px;
           cursor: pointer;
@@ -863,7 +860,7 @@ body {
           color: $hColor;
           @include font600-16;
           cursor: pointer;
-          transition: all 500ms linear;
+          transition: all 200ms linear;
           @media screen and (max-width: 800px) {
             font-size: 14px;
             width: 80px;
@@ -921,7 +918,7 @@ body {
         margin: 0 0 30px 0;
       }
       &::placeholder {
-        font-family: 'Open Sans', sans-serif;
+        font-family: $mainFont;
         font-weight: 300;
         font-size: 20px;
         color: $elemColor;
@@ -932,12 +929,12 @@ body {
       height: 54px;
       background-color: $btnColor;
       @include flexCentCent;
-      font-family: 'Open Sans', sans-serif;
+      font-family: $mainFont;
       font-weight: 700;
       font-size: 20px;
       color: $hColor;
       cursor: pointer;
-      transition: all 500ms linear;
+      transition: all 200ms linear;
       @media screen and (max-width: 900px) {
         width: 180px;
         font-size: 14px;
@@ -1013,21 +1010,19 @@ body {
         }
       }
       p {
-        font-family: 'Open Sans', sans-serif;
+        font-family: $mainFont;
         font-weight: 300;
         font-size: 15px;
         text-align: center;
       }
       &__price {
-        display: flex;
-        justify-content: center;
+        @include flexCentCent;
         padding-bottom: 25px;
         span {
-          font-family: 'Open Sans', sans-serif;
+          font-family: $mainFont;
           font-weight: 800;
           font-size: 20px;
           color: $priceColor;
-          //padding-left: 65px;
           margin-right: 25px;
         }
         div {
@@ -1110,7 +1105,7 @@ body {
     }
     > div {
       cursor: pointer;
-      transition: all 500ms linear;
+      transition: all 200ms linear;
     }
     > div:hover {
     box-shadow: 0 0 15px 3px #000000;
@@ -1182,7 +1177,7 @@ body {
       }
     }
     h2 {
-      font-family: 'Open Sans', sans-serif;
+      font-family: $mainFont;
       font-weight: 700;
       font-size: 25px;
       margin: 0;
@@ -1198,7 +1193,7 @@ body {
       }
     }
     a {
-      font-family: 'Open Sans', sans-serif;
+      font-family: $mainFont;
       font-weight: 700;
       font-size: 12px;
       color: $hColor;
@@ -1250,13 +1245,11 @@ body {
     }
   }
 .footer {
-  height: 250px;
+  height: 200px;
   background: #353535;
   p {
     text-align: center;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 600;
-    font-size: 26px;
+    @include font600-16;
     color: $hColor;
     padding-top: 30px;
     margin: 0;
@@ -1267,7 +1260,6 @@ body {
   div {
     margin: 40px 0 0 0;
     text-align: center;
-
   }
   svg {
     fill: $hColor;
@@ -1305,7 +1297,7 @@ body {
   width: 450px;
   height: 550px;
   margin: 5% auto;
-  background: $modalbgColor;
+  background: $btnColor;
   border-radius: 200px 0;
   left: 0;
   right: 0;
@@ -1357,6 +1349,7 @@ body {
       width: 320px;
       font-size: 22px;
       height: 40px;
+      padding-left: 15px;
       @media screen and (max-width: 500px) {
         width: 220px;
         height: 30px;
@@ -1474,13 +1467,13 @@ body {
     }
     svg {
       position: absolute;
-      left: 0;
+      left: -20px;
       right: 0;
       margin: 5% auto;
     }
     ol {
       li {
-        font-family: 'Open Sans', sans-serif;
+        font-family: $mainFont;
         font-weight: 300;
         font-size: 24px;
         margin: 0 30px 0 0;
@@ -1503,7 +1496,7 @@ body {
       }
     }
     h3 {
-      font-family: 'Open Sans', sans-serif;
+      font-family: $mainFont;
       font-weight: 300;
       font-size: 30px;
       text-align: center;
@@ -1519,7 +1512,7 @@ body {
       }
     }
     p {
-      font-family: 'Open Sans', sans-serif;
+      font-family: $mainFont;
       font-weight: 800;
       font-size: 35px;
       text-align: center;
@@ -1542,11 +1535,11 @@ body {
       justify-content: center;
       background: $btnColor;
       border: 2px inset $btnColor;
-      font-family: 'Open Sans', sans-serif;
+      font-family: $mainFont;
       font-weight: 500;
       font-size: 22px;
       color: #FFFFFF;
-      transition: all 500ms linear;
+      transition: all 200ms linear;
       cursor: pointer;
       @media screen and (max-width: 700px) {
         font-size: 18px;
@@ -1562,7 +1555,6 @@ body {
       }
     }
   }
-
 }
 .modal__contact {
   display: none;
@@ -1673,27 +1665,27 @@ body {
   position: fixed;
   z-index: 101;
   width: 1600px;
-  height: 872px;
+  height: 900px;
   border: 1px solid $modalbgColor;
   margin: 5% auto;
   left: 0;
   right: 0;
   @media screen and (max-width: 1650px) {
     width: 1000px;
-    height: 547px;
+    height: 564px;
     margin: 15% auto;
   }
   @media screen and (max-width: 1050px) {
     width: 600px;
-    height: 325px;
+    height: 338px;
   }
   @media screen and (max-width: 650px) {
     width: 350px;
-    height: 190px;
+    height: 197px;
   }
   @media screen and (max-width: 400px) {
     width: 250px;
-    height: 137px;
+    height: 141px;
   }
   video {
     width: 100%;
