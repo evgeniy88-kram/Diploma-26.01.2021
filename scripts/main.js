@@ -34,7 +34,6 @@
                 $('.special__content__right__price #buy__btn-8').css('display', 'flex');
             }
         }, 1000);
-
         ////////
         //Menu
         $('#hamburger').click(function() {
@@ -208,8 +207,6 @@
             $('.modal__bag, .dark__background').hide();
         })
         //
-
-
     });
 })(jQuery);
 
@@ -226,7 +223,6 @@ function initMap() {
         animation: google.maps.Animation.BOUNCE
     });
     const popUpContent = "Адрес: г.Краматорск, ул.Дворцовая, 100";
-    console.log(popUpContent);
     const infoWindow = new google.maps.InfoWindow({
         content: popUpContent,
     });
