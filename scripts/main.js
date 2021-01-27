@@ -1,7 +1,7 @@
 ;(function($){
     $(function (){
 //Timer
-        let countDownDate = new Date("Jan 26, 2021 18:25:00").getTime();
+        let countDownDate = new Date("Sep 26, 2021 18:25:00").getTime();
         let x = setInterval(function() {
             let now = new Date().getTime(),
                 dist = countDownDate - now,
